@@ -31,7 +31,7 @@ const onUpdateActiveLink = (value) =>{
 }
 
   return (
-    <Navbar expand="lg" class={scrolled ? "scrolled" : ""}>
+    <Navbar expand="md" class={scrolled ? "scrolled" : ""}>
         <Container>
             <Navbar.Brand href="#home">
                 <img src={logo} alt="Logo" />
