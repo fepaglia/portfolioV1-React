@@ -1,29 +1,52 @@
+import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { MailchimpForm } from "./MailchimpForm";
-import logo from "../assets/img/logo.svg";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import contactImg from "../assets/img/contact-img.svg";
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
-export const Footer = () =>{
+export const Contact = () =>{
+    const formInitialDetails = {
+        firstName: "",
+        lastNAme: "",
+        email: "",
+        phone: "",
+        message: ""
+    }
+    const [formDetails, setFormDetails] = useState(formInitialDetails);
+    const [buttonText, setButtonText] = useState("Send");
+    const [status, setStatus] = useState({});
+
+    const onFormUpdate = (category , value) => {
+        setFormDetails({
+            ...formDetails,
+            [category] : value
+        })
+    }
+
+    const handleSubmit = async (e) =>{
+        e.preventDefault();
+        setButtonText("Sending...");
+        let response = await
+        fetch("http://localhost:500/contact", {
+            method: "POST"
+            header: {
+                "Content-Type":
+                "application/json;charset=utf-8",
+            },
+            body: JSON.stringify(formDetails),
+        });
+        setButtonText("Send");
+        let result = await response.json();
+        setFormDetails(formInitialDetails);
+        
+         if (result.code == 200) {
+            setStatus({succes: true, message: "Message sent successfully"});
+         } else {
+            setStatus({succes: false, message: "Something went wrong, please try again later"})
+         }
+    }
+
     return (
-        <footer className="footer">
-            <Container>
-                <Row className="align-item-center">
-                    <MailchimpForm />
-                    <Col size={12} sm={6}>
-                        <img src={logo} alt="logo" />
-                    </Col>
-                    <Col size={12} sm={6} className="text-center text-sm-end">
-                        <div className="social-icon">
-                            <a href="#"><img src={navIcon1} alt="icon"/></a>
-                            <a href="#"><img src={navIcon2} alt="icon"/></a>
-                            <a href="#"><img src={navIcon3} alt="icon"/></a>
-                        </div>
-                        <p>Copyright 2023. All Rights Reserved</p>
-                    </Col>
-                </Row>
-            </Container>
-        </footer>
+
     )
 }
