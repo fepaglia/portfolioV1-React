@@ -1,0 +1,41 @@
+[33mcommit 1b45d2ba360a6e97eeec07359330b2876625b7b7[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: fepaglia <federicoepaglia@gmail.com>
+Date:   Mon Jan 9 15:26:54 2023 -0300
+
+    detalles ptojects
+
+[33mcommit 413ff112c7b5553631b8be5774b193354202bf1e[m
+Author: fepaglia <federicoepaglia@gmail.com>
+Date:   Mon Jan 9 12:44:16 2023 -0300
+
+    prueba
+
+[33mcommit 1ee607c8e4cd247c710dba861d0a6d68a79a7b48[m
+Author: Federico Paglia <federicoepaglia@gmail.com>
+Date:   Tue Jan 3 18:44:05 2023 -0300
+
+    skills, projects and cardprojects
+
+[33mcommit 1ba73b6f60d98a772c420bb0df34bb20e3cc8154[m
+Author: Federico Paglia <federicoepaglia@gmail.com>
+Date:   Mon Jan 2 18:31:57 2023 -0300
+
+    banner css
+
+[33mcommit 973d1292014273546a4dc231ff01383687e5b4b1[m
+Author: Federico Paglia <federicoepaglia@gmail.com>
+Date:   Mon Jan 2 14:44:51 2023 -0300
+
+    css navbar
+
+[33mcommit 9bcf993df2a1a688aaf4f841e844d79f01c69b0b[m
+Author: Federico Paglia <federicoepaglia@gmail.com>
+Date:   Mon Jan 2 13:38:47 2023 -0300
+
+    navbar
+
+[33mcommit 69e7bd5458939d07d0701cf239af132a681eb392[m
+Author: Federico Paglia <federicoepaglia@gmail.com>
+Date:   Mon Jan 2 12:13:25 2023 -0300
+
+    Initialize project using Create React App
